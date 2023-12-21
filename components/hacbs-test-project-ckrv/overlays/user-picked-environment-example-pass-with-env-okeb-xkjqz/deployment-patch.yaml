@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-ckrv
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/nbe-e2e-qqam-tenant/integ-app-muat/hacbs-test-project-ckrv@sha256:2f217852b8c7b7ae81fe7c65e140c42c5669fdd53045b278d162d1612f68e7e5
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
